@@ -21,4 +21,13 @@ package OOP.Easy;
 
 
 public class Easy {
+
+/**
+ * Class and Object Creation:
+ * Create a Car class with properties like make, model, and year.
+ * Write a method to display these details. Then, create a few Car objects and display their information.
+ */
+
+
+
 }

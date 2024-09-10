@@ -32,8 +32,9 @@ public class MediumAnswer {
     class Student extends Person {
         private int grade;
 
-        public Student(String name , int age , String address , int grade) {
-            super(name , age , address);
+        public Student(String name, int age, String address, int grade) {
+            super(name, age, address);
+            this.grade = grade;
         }
 
         @Override
@@ -47,8 +48,9 @@ public class MediumAnswer {
     class Employee extends Person {
         private double salary;
 
-        public Employee(String name, int age, String address) {
+        public Employee(String name, int age, String address , double salary) {
             super(name, age, address);
+            this.salary = salary;
         }
 
         @Override
