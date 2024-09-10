@@ -27,14 +27,14 @@ public class HardAnswer {
         }
     }
 
-    class WashingMachine extends Appliance {
-        private int dish;
-
-        @Override
-        public boolean turnOn() {
-            if (!power && )
-        }
-    }
+//    class WashingMachine extends Appliance {
+//        private int dish;
+//
+//        @Override
+//        public boolean turnOn() {
+//            if (!power && )
+//        }
+//    }
 
 
 }
