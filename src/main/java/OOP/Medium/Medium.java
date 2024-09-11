@@ -10,8 +10,7 @@ public class Medium {
      */
 
 
-
-    //----- of -----//
+    //----- ok -----//
     /**
      * Create an interface Shape with a method calculateArea().
      * Implement two classes Circle and Rectangle that implement the Shape interface.

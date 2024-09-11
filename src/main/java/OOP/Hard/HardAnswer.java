@@ -14,22 +14,11 @@ public class HardAnswer {
         private String brand;
         private boolean power;
 
-        public Appliance(String brand , boolean power) {
+        public Appliance(String brand, boolean power) {
             this.brand = brand;
             this.power = power;
         }
 
-        public String getBrand() {
-            return brand;
-        }
-
-        public boolean isPoweredOn() {
-            return power;
-        }
-
-        public void setPower(boolean power) {
-            this.power = power;
-        }
 
         public void turnOn() {
             if (!power) {
@@ -54,8 +43,8 @@ public class HardAnswer {
     class WashingMachine extends Appliance {
         private int loadCapacity;
 
-        public WashingMachine(String brand , boolean power, int loadCapacity) {
-            super(brand , power);
+        public WashingMachine(String brand, boolean power, int loadCapacity) {
+            super(brand, power);
             this.loadCapacity = loadCapacity;
         }
 
@@ -70,30 +59,8 @@ public class HardAnswer {
             super.turnOff();
             System.out.println("Washing machine is now off.");
         }
-
     }
 
-    class Refrigerator extends Appliance {
-
-        private int temperature;
-
-        public Refrigerator(String brand , boolean power, int temperature) {
-            super(brand , power);
-            this.temperature = temperature;
-        }
-
-        @Override
-        public void turnOn() {
-            super.turnOn();
-            System.out.println("Refrigerator is cooling at " + temperature + " degrees Celsius.");
-        }
-
-        @Override
-        public void turnOff() {
-            super.turnOff();
-            System.out.println("Refrigerator is no longer cooling.");
-        }
-    }
 
     /**
      * Create a Library class that contains a list of Book objects (composition).
@@ -106,7 +73,7 @@ public class HardAnswer {
         private String author;
         private String isbn;
 
-        public Book(String title , String author, String isbn) {
+        public Book(String title, String author, String isbn) {
             this.title = title;
             this.author = author;
             this.isbn = isbn;
@@ -162,14 +129,14 @@ public class HardAnswer {
         }
 
         public void displayBooks() {
-           if (books.isEmpty()) {
-               System.out.println("No such as BOOK");
-           } else {
-               System.out.println("Book in the library");
-               for (Book book : books) {
-                   System.out.println(book);
-               }
-           }
+            if (books.isEmpty()) {
+                System.out.println("No such as BOOK");
+            } else {
+                System.out.println("Book in the library");
+                for (Book book : books) {
+                    System.out.println(book);
+                }
+            }
         }
     }
 
@@ -177,23 +144,119 @@ public class HardAnswer {
      * Create a class Animal with a method sound(). Then, create two
      * subclasses Dog and Cat that override the sound() method to
      * provide their specific sounds.
-     *
+     * <p>
      * Use the super keyword to demonstrate the calling of a superclass method.
      */
+    class Animal {
 
-    /**
-     * Create two interfaces Movable (with method move()) and
-     * Flyable (with method fly()). Then, create a class SuperHero that implements
-     * both interfaces and provides specific implementations of the methods.
-     */
+        public void sound() {
+            System.out.println("This is animal sound");
+        }
+    }
 
-    /**
-     * Implement a University class with an inner class Department. The University
-     * class should have fields like name and location, while the
-     * Department class should have fields like deptName and hodName.
-     *
-     * Demonstrate how to create an object of the inner class
-     * and access its members.
-     */
+    class Dog extends Animal {
+        @Override
+        public void sound() {
+            super.sound();
+            System.out.println("The dog barks");
+        }
+    }
 
+    class Cat extends Animal {
+        @Override
+        public void sound() {
+            super.sound();
+            System.out.println("The cat meows");
+        }
+    }
+
+        /**
+         * Create two interfaces Movable (with method move()) and
+         * Flyable (with method fly()). Then, create a class SuperHero that implements
+         * both interfaces and provides specific implementations of the methods.
+         */
+
+        interface Mobale {
+            void move();
+
+        }
+
+        interface Flyable {
+            void fly();
+        }
+
+        class SuperHero implements Mobale, Flyable {
+            @Override
+            public void move() {
+                System.out.println("He is walking");
+            }
+
+            @Override
+            public void fly() {
+                System.out.println("He is flying");
+            }
+        }
+
+        /**
+         * Implement a University class with an inner class Department. The University
+         * class should have fields like name and location, while the
+         * Department class should have fields like deptName and hodName.
+         *
+         * Demonstrate how to create an object of the inner class
+         * and access its members.
+         */
+
+        class University {
+            private String name;
+            private String location;
+
+            public University(String name , String location) {
+                this.name = name;
+                this.location = location;
+            }
+
+            class Departement {
+                private String deptName;
+                private String nodName;
+
+                public Departement(String deptName , String nodName) {
+                    this.deptName = deptName;
+                    this.nodName = nodName;
+                }
+
+
+                public String getDeptName() {
+                    return deptName;
+                }
+
+                public void setDeptName(String deptName) {
+                    this.deptName = deptName;
+                }
+
+                public String getNodName() {
+                    return nodName;
+                }
+
+                public void setNodName(String nodName) {
+                    this.nodName = nodName;
+                }
+            }
+
+            public String getName() {
+                return name;
+            }
+
+            public void setName(String name) {
+                this.name = name;
+            }
+
+            public String getLocation() {
+                return location;
+            }
+
+            public void setLocation(String location) {
+                this.location = location;
+            }
+        }
 }
+
