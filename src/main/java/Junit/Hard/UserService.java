@@ -1,9 +1,14 @@
 package Junit.Hard;
 
 public class UserService {
+    private UserDatabase userDatabase;
+
+    // Constructor injection
+    public UserService(UserDatabase userDatabase) {
+        this.userDatabase = userDatabase;
+    }
+
     public User getUserById(int id) {
-        // Simulate database interaction
-        UserDatabase userDatabase = new UserDatabase();
         return userDatabase.findUserById(id);
     }
 }
@@ -23,6 +28,13 @@ class User {
         this.name = name;
     }
 
-    // Getters and Setters
+    // Getters
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
 
