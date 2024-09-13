@@ -10,6 +10,7 @@ public class Hard {
      * WashingMachine , and implement the abstract methods with specific behavior.
      */
 
+
     /**
      * Create a Library class that contains a list of Book objects (composition).
      * Each Book should have attributes such as title, author, and ISBN.

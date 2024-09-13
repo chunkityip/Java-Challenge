@@ -37,18 +37,18 @@ public class OrderServiceTest {
     */
 
     @Test
-    public void testprocessOrder() {
+    public void testProcessOrder() {
         // Mock
         ExternalOrderService externalOrderService = mock(ExternalOrderService.class);
 
-        // Stud
-        when(externalOrderService.validateOrder("123")).thenReturn(true);
+        // Stub
+        when(externalOrderService.validateOrder("123"))
+                .thenReturn(true);
 
         // Inject
         OrderService orderService = new OrderService(externalOrderService);
 
         // Assert
-        assertTrue(externalOrderService.validateOrder("123"));
-
+        assertTrue(orderService.processOrder("123"));
     }
 }

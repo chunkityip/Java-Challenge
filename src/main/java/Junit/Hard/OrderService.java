@@ -18,7 +18,7 @@ public class OrderService {
      */
 
     // Constructor injection
-    @Autowired
+
     public OrderService(ExternalOrderService externalOrderService) {
         this.externalOrderService = externalOrderService;
     }

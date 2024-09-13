@@ -8,12 +8,17 @@ public class UserService {
         this.userDatabase = userDatabase;
     }
 
+    // Setter for dependency injection
+//    public void setUserDatabase(UserDatabase userDatabase) {
+//        this.userDatabase = userDatabase;
+//    }
+
     public User getUserById(int id) {
         return userDatabase.findUserById(id);
     }
 }
 
-class UserDatabase {
+class  UserDatabase {
     public User findUserById(int id) {
         return new User(id, "John Doe");
     }

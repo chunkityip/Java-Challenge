@@ -1,8 +1,13 @@
 package Junit.Hard;
 
 public class CacheService {
+    private ExternalCache externalCache;
+
+    public CacheService(ExternalCache externalCache) {
+        this.externalCache = externalCache;
+    }
+
     public String getCachedData(String key) {
-        ExternalCache externalCache = new ExternalCache();
         return externalCache.getCacheValue(key);
     }
 }
