@@ -1,0 +1,29 @@
+1. Create a table Students with the columns student_id(INT),
+name(VARCHAR), and age(INT).
+
+    Create TABLE Students(
+        student_id INT,
+        NAME VARCHAR(255),
+        age INT
+        );
+
+2. Add a new column email(VARCHAR) to the Students table
+
+ALTER TABLE Students
+ADD email VARCHAR
+
+3. Rename the column "age" to "student_age"
+in the Students table
+
+ALTER TABLE Students
+RENAME COLUMN age TO student_age
+
+4. Create a unique constraint call "unique_email" on the email column
+in the Students table so no duplicate email allowed
+
+ALTER TABLE Students
+ADD CONSTRAINT unique_name UNIQUE(email)
+
+5. Drop the email column from the Students table.
+ALTER TABLE Students
+DROP COLUMN email;
