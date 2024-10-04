@@ -1,0 +1,19 @@
+1. Create a table Courses with the columns course_id (INT),
+course_name (VARCHAR), and credits (INT),
+ensuring the course_id is the primary key.
+
+2. Create a foreign key relationship between Students
+and a new table Enrollments, where Enrollments
+references Students.student_id from Students table
+and Courses.course_id from Courses
+
+
+3. Add a composite primary key on the
+columns student_id and course_id and call pk_student_course in the Enrollments table
+
+
+4. Create an index call idx_course_name on the course_name column in the Courses table
+    CREATE INDEX idx_course_name ON Courses(course_name)
+
+5. Alter the Students table to set a default value of
+18 for the student_age column

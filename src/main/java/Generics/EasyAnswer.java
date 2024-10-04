@@ -85,9 +85,10 @@ public class EasyAnswer {
         }
 
         /**
-         * Write a generic method that accepts two collections
-         * and returns true if the two collections contain exactly the
-         * same elements, regardless of order.
+         * Write a generic method call findMax that accepts two collections
+         * call a and b and using compareTo()
+         *
+         * if a is bigger , return a,  else , return b
          *
          * Use wildcards in the method signature.
          */

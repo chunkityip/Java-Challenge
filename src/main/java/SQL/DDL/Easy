@@ -2,7 +2,6 @@
 name(VARCHAR), and age(INT).
 
 
-
 2. Add a new column email(VARCHAR) to the Students table
 
 
@@ -12,10 +11,13 @@ in the Students table
 
 
 
+
 4. Create a unique constraint call "unique_email" on the email column
 in the Students table so no duplicate email allowed
 
 
 
 5. Drop the email column from the Students table.
+DROP COLUMN email FROM Students
+
 

@@ -10,7 +10,7 @@ name(VARCHAR), and age(INT).
 2. Add a new column email(VARCHAR) to the Students table
 
 ALTER TABLE Students
-ADD email VARCHAR
+ADD COLUMN email VARCHAR(255)
 
 3. Rename the column "age" to "student_age"
 in the Students table
