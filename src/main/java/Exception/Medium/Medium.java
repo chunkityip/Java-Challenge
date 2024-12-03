@@ -1,6 +1,7 @@
 package Exception.Medium;
 
 import Exception.CustomException.CustomExceptionWithCauseAnswer;
+import Exception.CustomException.InvalidAgeException;
 import Exception.CustomException.InvalidAgeExceptionAnswer;
 import org.apache.catalina.User;
 
@@ -15,6 +16,13 @@ public class Medium {
      * Create a custom exception called InvalidAgeException.
      * Write a program that throws this exception when a user enters an invalid age (e.g., negative age or age over 150).
      */
+    public void ageInput(int age) throws InvalidAgeException {
+        if (age < 0 || age > 150) {
+            throw new InvalidAgeException("Invalid age : Please double check");
+        }
+        System.out.println("Your age is :" + age);
+    }
+
 
 
 
@@ -26,6 +34,27 @@ public class Medium {
      * Write a program that reads from a file, divides two integers, and then parses an integer from a string.
      * Use a single try block to handle all potential exceptions.
      */
+    public void readsFile(String filePath , String numberStr) {
+        try {
+            File file = new File("....");
+            Scanner scanner = new Scanner(file);
+
+            int a = 10;
+            int b = 0;
+            System.out.println(a / b);
+
+            int number = Integer.parseInt(numberStr);
+            System.out.println(number);
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + filePath);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number");
+        } catch (ArithmeticException e) {
+            System.out.println("Can't divide by zero");
+        }
+    }
 
 
 

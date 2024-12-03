@@ -1,5 +1,10 @@
 package Exception.Easy;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
 public class Easy {
     /**
      * Simple Arithmetic Exception:
@@ -47,6 +52,10 @@ public class Easy {
      * Write a program that tries to read from a file that doesn't exist.
      * Catch and handle the FileNotFoundException.
      */
+    public void readFile() {
+
+    }
+
 
 
     /**
@@ -54,5 +63,10 @@ public class Easy {
      * Create a program that reads a string input and tries to convert it to an integer.
      * Handle the NumberFormatException when invalid input is provided.
      */
+    public void numberInput(String object) {
+
+    }
 
 }
+
+
